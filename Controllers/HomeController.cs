@@ -23,7 +23,21 @@ namespace BarkerAssignment3.Controllers
             return View();
         }
 
+        {HttpGet}
+        public IActionResult MovieForm(FormResponse appResponse)
+        {
+            Debug.WriteLine("Title: " + appResponse.Title);
+            return View();
+        }
+        {HttpPost}
+
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+
+        public IActionResult Podcasts()
         {
             return View();
         }

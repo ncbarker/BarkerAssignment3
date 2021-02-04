@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Add a Movie";
+}
+
+@model BarkerAssignment3.Models.FormResponse
+<h1>@ViewData["Title"]</h1>
+
+<p>Add a movie to my collection.</p>
+
+<form>
+    <div>
+        <label asp-for="Category">Category:</label>
+        <select asp-for="Category">
+            <option>--</option>
+            <option>Action/Adventure</option>
+            <option>Comedy</option>
+            <option>Drama</option>
+            <option>Family</option>
+            <option>Horror/Suspense</option>
+            <option>Miscellaneous</option>
+            <option>Television</option>
+            <option>VHS</option>
+        </select>
+    </div>
+    <div>
+        <label asp-for="Title">Title:</label>
+        <input asp-for="Title" />
+    </div>
+    <div>
+        <label asp-for="Year">Year:</label>
+        <input asp-for="Year"/>
+    </div>
+    <div>
+        <label asp-for="Director">Director:</label>
+        <input asp-for="Director"/>
+    </div>
+    <div>
+        <label asp-for="Rating">Rating:</label>
+        <select asp-for="Rating">
+            <option>--</option>
+            <option>G</option>
+            <option>PG</option>
+            <option>PG-13</option>
+            <option>R</option>
+        </select>
+    </div>
+    <div>
+        <label asp-for="Edited">Edited?</label>
+        <input asp-for="Edited" type="checkbox" />
+    </div>
+    <div>
+        <label asp-for="LentTo">Lent to:</label>
+        <input asp-for="LentTo" />
+    </div>
+    <div>
+        <label asp-for="Notes">Notes:</label>
+        <input asp-for="Notes" />
+    </div>
+    <br />
+    <br />
+    <button type="submit">Add film to collection</button>
+
+</form>
+
