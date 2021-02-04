@@ -22,14 +22,19 @@ namespace BarkerAssignment3.Controllers
         {
             return View();
         }
-
-        {HttpGet}
-        public IActionResult MovieForm(FormResponse appResponse)
+        [HttpGet]
+        public IActionResult MovieForm()
         {
-            Debug.WriteLine("Title: " + appResponse.Title);
             return View();
         }
-        {HttpPost}
+        
+        [HttpPost]
+        public IActionResult MovieForm(FormResponse appResponse)
+        {
+            
+            return View("Confirmation", appResponse);
+        }
+        
 
         public IActionResult Privacy()
         {

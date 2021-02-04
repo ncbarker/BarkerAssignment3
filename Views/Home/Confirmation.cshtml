@@ -1,0 +1,23 @@
+﻿@*
+    
+*@
+@{
+    ViewData["Title"] = "Film Submitted";
+    ViewBag.Title = "Thank you for you film submission. I am excited to add " + Model.Title + " to the collection.";
+}
+
+@model BarkerAssignment3.Models.FormResponse
+
+<h1>@ViewData["Title"]</h1>
+<div>
+    <p>Thank you for your film submission.</p>
+    @if (Model.Title == "Independence Day")
+    {
+        @:Actually...Yikes, sorry. I am afraid that your opinion is garbage. Thanks for trying though.
+    }
+    else
+    {
+        @:Thank you!
+    }
+</div>
+
