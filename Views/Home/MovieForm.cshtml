@@ -10,7 +10,7 @@
 <form asp-action="MovieForm" method="post">
     <div>
         <label asp-for="Category">Category:</label>
-        <select asp-for="Category">
+        <select asp-for="Category" required>
             <option>--</option>
             <option>Action/Adventure</option>
             <option>Comedy</option>
@@ -24,19 +24,19 @@
     </div>
     <div>
         <label asp-for="Title">Title:</label>
-        <input asp-for="Title" />
+        <input asp-for="Title" required/>
     </div>
     <div>
         <label asp-for="Year">Year:</label>
-        <input asp-for="Year"/>
+        <input asp-for="Year" required/>
     </div>
     <div>
         <label asp-for="Director">Director:</label>
-        <input asp-for="Director"/>
+        <input asp-for="Director" required/>
     </div>
     <div>
         <label asp-for="Rating">Rating:</label>
-        <select asp-for="Rating">
+        <select asp-for="Rating" required>
             <option>--</option>
             <option>G</option>
             <option>PG</option>
@@ -54,7 +54,7 @@
     </div>
     <div>
         <label asp-for="Notes">Notes:</label>
-        <input asp-for="Notes" />
+        <input asp-for="Notes" maxlength="25" />
     </div>
     <br />
     <br />

@@ -31,10 +31,14 @@ namespace BarkerAssignment3.Controllers
         [HttpPost]
         public IActionResult MovieForm(FormResponse appResponse)
         {
-            
+            TempStorage.AddResponse(appResponse);
             return View("Confirmation", appResponse);
         }
         
+        public IActionResult CollectionList()
+        {
+            return View(TempStorage.Responses);
+        }
 
         public IActionResult Privacy()
         {

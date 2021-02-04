@@ -1,0 +1,36 @@
+﻿@*
+    
+*@
+@{
+    ViewData["Title"] = "Collection";
+    ViewBag.Title = "Film Collection";
+}
+@model IEnumerable<BarkerAssignment3.Models.FormResponse>
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h2>Here are the films in the current collection.</h2>
+
+    <table>
+        <thead>
+            <tr><th>Category</th><th>Title</th><th>Year</th><th>Director</th><th>Rating</th><th>Edited</th><th>Lent To</th><th>Notes</th></tr>
+        </thead>
+
+        <tbody>
+            @foreach(BarkerAssignment3.Models.FormResponse x in Model)
+            {
+            <tr>
+                <td>@x.Category</td>
+                <td>@x.Title</td>
+                <td>@x.Year</td>
+                <td>@x.Director</td>
+                <td>@x.Rating</td>
+                <td>@x.Edited</td>
+                <td>@x.LentTo</td>
+                <td>@x.Notes</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
